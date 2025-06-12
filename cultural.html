@@ -3,19 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cultural Fest Registration</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Cultural Fest Registration | MAR BASELIOS College</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="header">
     <h1>MAR BASELIOS COLLEGE OF ENGINEERING AND TECHNOLOGY</h1>
-    <h2>Cultural Fest 2024 Registration</h2>
+    <h2>AUTONOMOUS</h2>
   </div>
 
   <div class="container">
     <a href="index.html" class="back-link">← Back to Home</a>
 
-    <div class="registration-card">
+    <div class="registration-card cultural">
+      <h2>Cultural Fest 2024 Registration</h2>
+
+      <div class="fest-details cultural">
+        <h3>Event Details</h3>
+        <p><strong>Date:</strong> February 22-24, 2025</p>
+        <p><strong>Venue:</strong> College Auditorium and Open Air Theater</p>
+        <p><strong>Theme:</strong> "Unity in Diversity - Celebrating India's Cultural Heritage"</p>
+      </div>
+
       <form id="culturalFestForm">
         <div class="form-group">
           <label for="fullName">Full Name</label>
@@ -28,53 +37,82 @@
         </div>
 
         <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+
+        <div class="form-group">
           <label for="department">Department</label>
           <select id="department" name="department" required>
             <option value="">-- Select Department --</option>
-            <option value="CE">Civil</option>
-            <option value="CSE">CSE</option>
-            <option value="ECE">ECE</option>
-            <option value="EEE">EEE</option>
-            <option value="ME">ME</option>
+            <option value="CE">Civil Engineering</option>
+            <option value="CSE">Computer Science Engineering</option>
+            <option value="ECE">Electronics and Communication Engineering</option>
+            <option value="EEE">Electrical and Electronics Engineering</option>
+            <option value="ME">Mechanical Engineering</option>
           </select>
         </div>
 
         <div class="form-group">
-          <label>Events Interested In</label>
-          <div class="category-option">
-            <input type="checkbox" id="music" name="events" value="Music">
-            <label for="music">Music</label>
-          </div>
-          <div class="category-option">
-            <input type="checkbox" id="dance" name="events" value="Dance">
-            <label for="dance">Dance</label>
-          </div>
-          <div class="category-option">
-            <input type="checkbox" id="drama" name="events" value="Drama">
-            <label for="drama">Drama</label>
+          <label for="year">Year of Study</label>
+          <select id="year" name="year" required>
+            <option value="">-- Select Year --</option>
+            <option value="1">First Year</option>
+            <option value="2">Second Year</option>
+            <option value="3">Third Year</option>
+            <option value="4">Fourth Year</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Events Interested In (Select at least one)</label>
+          <div class="event-categories">
+            <div class="category-option">
+              <input type="checkbox" id="music" name="culturalEvents" value="Music"/>
+              <label for="music">Music (Solo/Band)</label>
+            </div>
+            <div class="category-option">
+              <input type="checkbox" id="dance" name="culturalEvents" value="Dance"/>
+              <label for="dance">Dance (Solo/Group)</label>
+            </div>
+            <div class="category-option">
+              <input type="checkbox" id="drama" name="culturalEvents" value="Drama"/>
+              <label for="drama">Drama/Skit</label>
+            </div>
+            <div class="category-option">
+              <input type="checkbox" id="art" name="culturalEvents" value="Art"/>
+              <label for="art">Art Exhibition</label>
+            </div>
+            <div class="category-option">
+              <input type="checkbox" id="photography" name="culturalEvents" value="Photography"/>
+              <label for="photography">Photography</label>
+            </div>
+            <div class="category-option">
+              <input type="checkbox" id="fashion" name="culturalEvents" value="Fashion"/>
+              <label for="fashion">Fashion Show</label>
+            </div>
           </div>
         </div>
 
-        <button type="submit" class="btn">Submit</button>
+        <div class="form-group">
+          <label for="experience">Previous Experience (if any)</label>
+          <textarea id="experience" name="experience"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="requirements">Special Requirements</label>
+          <textarea id="requirements" name="requirements" placeholder="Any special equipment or accommodations needed"></textarea>
+        </div>
+
+        <button type="submit" class="btn">Submit Registration</button>
       </form>
     </div>
   </div>
 
   <footer class="footer">
-    <p>&copy; 2025 Mar Baselios College. All Rights Reserved.</p>
+    <p>&copy; 2025 Mar Baselios College of Engineering & Technology. All Rights Reserved.</p>
   </footer>
 
-  <script>
-    document.getElementById('culturalFestForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const selectedEvents = document.querySelectorAll('input[name="events"]:checked');
-      if (selectedEvents.length === 0) {
-        alert('Select at least one event.');
-        return;
-      }
-      alert('Cultural Fest registration submitted!');
-      this.reset();
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

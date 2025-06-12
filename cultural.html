@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cultural Fest Registration</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="header">
+    <h1>MAR BASELIOS COLLEGE OF ENGINEERING AND TECHNOLOGY</h1>
+    <h2>Cultural Fest 2024 Registration</h2>
+  </div>
+
+  <div class="container">
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+    <div class="registration-card">
+      <form id="culturalFestForm">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="department">Department</label>
+          <select id="department" name="department" required>
+            <option value="">-- Select Department --</option>
+            <option value="CE">Civil</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="ME">ME</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Events Interested In</label>
+          <div class="category-option">
+            <input type="checkbox" id="music" name="events" value="Music">
+            <label for="music">Music</label>
+          </div>
+          <div class="category-option">
+            <input type="checkbox" id="dance" name="events" value="Dance">
+            <label for="dance">Dance</label>
+          </div>
+          <div class="category-option">
+            <input type="checkbox" id="drama" name="events" value="Drama">
+            <label for="drama">Drama</label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Mar Baselios College. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('culturalFestForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const selectedEvents = document.querySelectorAll('input[name="events"]:checked');
+      if (selectedEvents.length === 0) {
+        alert('Select at least one event.');
+        return;
+      }
+      alert('Cultural Fest registration submitted!');
+      this.reset();
+    });
+  </script>
+</body>
+</html>

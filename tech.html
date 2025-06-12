@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tech Fest Registration | MAR BASELIOS College</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="header">
+    <h1>MAR BASELIOS COLLEGE OF ENGINEERING AND TECHNOLOGY</h1>
+    <h2>AUTONOMOUS</h2>
+  </div>
+
+  <div class="container">
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+    <div class="registration-card tech">
+      <h2>Tech Fest 2024 Registration</h2>
+
+      <div class="fest-details tech">
+        <h3>Event Details</h3>
+        <p><strong>Date:</strong> March 5-6, 2025</p>
+        <p><strong>Venue:</strong> Innovation Lab, Main Seminar Hall</p>
+        <p><strong>Theme:</strong> "Innovate, Create, Transform"</p>
+      </div>
+
+      <form id="techFestForm">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+
+        <div class="form-group">
+          <label for="department">Department</label>
+          <select id="department" name="department" required>
+            <option value="">-- Select Department --</option>
+            <option value="CE">Civil Engineering</option>
+            <option value="CSE">Computer Science Engineering</option>
+            <option value="ECE">Electronics and Communication Engineering</option>
+            <option value="EEE">Electrical and Electronics Engineering</option>
+            <option value="ME">Mechanical Engineering</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="year">Year of Study</label>
+          <select id="year" name="year" required>
+            <option value="">-- Select Year --</option>
+            <option value="1">First Year</option>
+            <option value="2">Second Year</option>
+            <option value="3">Third Year</option>
+            <option value="4">Fourth Year</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Events Interested In (Select at least one)</label>
+          <div class="event-categories">
+            <div class="category-option">
+              <input type="checkbox" id="coding" name="techEvents" value="Coding" />
+              <label for="coding">Coding Challenge</label>
+            </div>
+            <div class="category-option">
+              <input type="checkbox" id="robotics" name="techEvents" value="Robotics" />
+              <label for="robotics">Robotics Competition</label>
+            </div>
+            <div class="category-option">
+              <input type="checkbox" id="hackathon" name="techEvents" value="Hackathon" />
+              <label for="hackathon">Hackathon</label>
+            </div>
+            <div class="category-option">
+              <input type="checkbox" id="poster" name="techEvents" value="Poster Presentation" />
+              <label for="poster">Poster Presentation</label>
+            </div>
+            <div class="category-option">
+              <input type="checkbox" id="quiz" name="techEvents" value="Tech Quiz" />
+              <label for="quiz">Technical Quiz</label>
+            </div>
+            <div class="category-option">
+              <input type="checkbox" id="ideathon" name="techEvents" value="Ideathon" />
+              <label for="ideathon">Ideathon</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="experience">Previous Experience (if any)</label>
+          <textarea id="experience" name="experience"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="requirements">Special Requirements</label>
+          <textarea id="requirements" name="requirements" placeholder="E.g., devices, equipment, etc."></textarea>
+        </div>
+
+        <button type="submit" class="btn">Submit Registration</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Mar Baselios College of Engineering & Technology. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
- :root {
+:root {
     --primary-blue: #0056b3;
     --secondary-blue: #003366;
     --accent-gold: #FFD700;
@@ -12,13 +12,20 @@
     --fest-tech: #0d6efd;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--light-bg);
     color: var(--text-dark);
     line-height: 1.6;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .header {
@@ -41,10 +48,17 @@ body {
     font-weight: 400;
 }
 
+.nav-bar {
+    background-color: var(--secondary-blue);
+    padding: 10px 0;
+    text-align: center;
+}
+
 .container {
     max-width: 800px;
     margin: 30px auto;
     padding: 0 20px;
+    flex: 1;
 }
 
 .registration-options {
@@ -92,6 +106,55 @@ body {
 }
 
 .registration-card.tech h2 {
+    color: var(--fest-tech);
+}
+
+.fest-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.fest-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+}
+
+.fest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.fest-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--fest-cultural);
+}
+
+.fest-card:nth-child(2) .fest-image {
+    border-bottom: 2px solid var(--fest-tech);
+}
+
+.fest-title {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--fest-cultural);
+    text-align: center;
+}
+
+.fest-card:nth-child(2) .fest-title {
     color: var(--fest-tech);
 }
 
@@ -147,7 +210,6 @@ body {
     border: none;
     cursor: pointer;
     font-size: 16px;
-    width: 100%;
 }
 
 .registration-card.tech .btn {
@@ -183,7 +245,7 @@ body {
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: 50px;
+    width: 100%;
 }
 
 .event-categories {

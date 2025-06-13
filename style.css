@@ -1,7 +1,7 @@
 :root {
-    --primary-blue: #0056b3;
-    --secondary-blue: #003366;
-    --accent-gold: #FFD700;
+    --primary-blue: #141057;
+    --secondary-blue: #0e4e8f;
+    --accent-gold: #b09c27;
     --light-bg: #f8f9fa;
     --card-bg: #ffffff;
     --text-dark: #212529;
@@ -54,36 +54,22 @@ body {
     text-align: center;
 }
 
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
 .container {
     max-width: 800px;
     margin: 30px auto;
     padding: 0 20px;
     flex: 1;
-}
-
-.registration-options {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 60px;
-    flex-wrap: wrap;
-}
-
-.registration-options .btn {
-    width: 250px;
-    padding: 20px;
-    font-size: 18px;
-    background-color: var(--fest-cultural);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.registration-options .btn:hover {
-    background-color: #5a32a3;
 }
 
 .registration-card {
@@ -241,7 +227,7 @@ body {
 }
 
 .footer {
-    background-color: var(--secondary-blue);
+    background-color:var(--primary-blue) ;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -259,4 +245,99 @@ body {
 .category-option input {
     width: auto;
     margin-right: 10px;
+}
+.college-banner {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+.college-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 5px solid var(--accent-gold);
+}
+.top-links-bar {
+    background-color: yellow;
+    border-bottom: 2px solid #0056a3;
+    padding: 10px 0;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.top-links-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.top-links-bar li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.top-links-bar a {
+    text-decoration: none;
+    color: #0056a3;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.top-links-bar a:hover {
+    color: #f39c12; /* accent gold or hover effect */
+}
+
+.hero-section {
+    background-image: url('./images/baseliospic3.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    background-color: rgba(255, 255, 255, 0.85); /* semi-transparent white */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 90%;
+}
+
+.registration-card {
+    margin: 0; /* Remove extra top margin */
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* center horizontally */
+    gap: 20px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.college-logo {
+    height: 80px;
+    width: auto;
+}
+
+.college-name {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .college-name h1 {
+        font-size: 20px;
+    }
+    .college-logo {
+        height: 60px;
+    }
 }

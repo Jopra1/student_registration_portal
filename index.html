@@ -4,48 +4,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fest Registration | MAR BASELIOS College</title>
-  <link rel="stylesheet" href="style.css"/>
+  <!-- Use Flask's url_for to load CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <div class="header">
-  <div class="header-content">
-    <img src="./images/mbcet-logo.jpg" alt="College Logo" class="college-logo" />
-    <div class="college-name">
-      <h1>MAR BASELIOS COLLEGE OF ENGINEERING AND TECHNOLOGY</h1>
-      <h2>AUTONOMOUS</h2>
-    </div>
-  </div>
-</div>
-
-  <nav class="top-links-bar">
-  <ul>
-    <li><a href="#">About Us</a></li>
-    <li><a href="#">Careers</a></li>
-    <li><a href="./authenticate.html">Login/Sign Up</a></li>
-
-  </ul>
-</nav>
-
-
-<div class="hero-section">
-  <div class="overlay">
-    <div class="registration-card">
-      <h2>Fest Registrations </h2>
-      <p>Please select the fest you want to register for:</p>
-      <div class="fest-buttons">
-        <a href="cultural.html" class="fest-card">
-          <img src="./images/cultural-fest.jpg" alt="Cultural Fest" class="fest-image"/>
-          <span class="fest-title">Cultural Fest</span>
-        </a>
-        <a href="tech.html" class="fest-card">
-          <img src="./images/tech-fest.jpg" alt="Tech Fest" class="fest-image"/>
-          <span class="fest-title">Tech Fest</span>
-        </a>
+    <div class="header-content">
+      <!-- Use url_for for static images -->
+      <img src="{{ url_for('static', filename='images/mbcet-logo.jpg') }}" alt="College Logo" class="college-logo" />
+      <div class="college-name">
+        <h1>MAR BASELIOS COLLEGE OF ENGINEERING AND TECHNOLOGY</h1>
+        <h2>AUTONOMOUS</h2>
       </div>
     </div>
   </div>
-</div>
 
+  <nav class="top-links-bar">
+    <ul>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="{{ url_for('home') }}">Login/Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-section">
+    <div class="overlay">
+      <div class="registration-card">
+        <h2>Fest Registrations</h2>
+        <p>Please select the fest you want to register for:</p>
+        <div class="fest-buttons">
+          <!-- Use url_for for route links and images -->
+          <a href="{{ url_for('cultural') }}" class="fest-card">
+            <img src="{{ url_for('static', filename='images/cultural-fest.jpg') }}" alt="Cultural Fest" class="fest-image"/>
+            <span class="fest-title">Cultural Fest</span>
+          </a>
+          <a href="{{ url_for('tech') }}" class="fest-card">
+            <img src="{{ url_for('static', filename='images/tech-fest.jpg') }}" alt="Tech Fest" class="fest-image"/>
+            <span class="fest-title">Tech Fest</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <footer class="footer">
     <p>© 2025 Mar Baselios College of Engineering & Technology. All Rights Reserved.</p>

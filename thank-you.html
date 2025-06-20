@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Registration Successful</title>
-  <link rel="stylesheet" href="style.css" />
+  <!-- Use Flask's url_for to load CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <header class="header">
@@ -14,9 +15,10 @@
 
   <main class="container">
     <section class="registration-card">
-      <h2>Your registration was successful! </h2>
+      <h2>Your registration was successful!</h2>
       <p>We look forward to seeing you at the fest.</p>
-      <a href="index.html" class="btn">Back to Home</a>
+      <!-- Use url_for for navigation -->
+      <a href="{{ url_for('home') }}" class="btn">Back to Home</a>
     </section>
   </main>
 

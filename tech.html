@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tech Fest Registration | MAR BASELIOS College</title>
-  <link rel="stylesheet" href="style.css" />
+  <!-- Use Flask's url_for to load CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <div class="header">
@@ -13,7 +14,8 @@
   </div>
 
   <div class="container">
-    <a href="index.html" class="back-link">← Back to Home</a>
+    <!-- Use url_for for navigation links -->
+    <a href="{{ url_for('home') }}" class="back-link">← Back to Home</a>
 
     <div class="registration-card tech">
       <h2>Tech Fest 2025 Registration</h2>
@@ -25,7 +27,8 @@
         <p><strong>Theme:</strong> "Innovate, Create, Transform"</p>
       </div>
 
-      <form id="techFestForm">
+      <!-- Use Flask form action (optional, defaults to same route) -->
+      <form id="techFestForm" method="post" action="{{ url_for('tech') }}">
         <div class="form-group">
           <label for="fullName">Full Name</label>
           <input type="text" id="fullName" name="fullName" required />
@@ -112,7 +115,5 @@
   <footer class="footer">
     <p>&copy; 2025 Mar Baselios College of Engineering & Technology. All Rights Reserved.</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
